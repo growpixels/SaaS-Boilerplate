@@ -1,4 +1,3 @@
-const ADMIN_EMAIL = 'founder@growpixels.in';
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 import {
   type NextFetchEvent,
@@ -47,19 +46,6 @@ export default function middleware(
       }
 
       const authObj = await auth();
-// Not logged in (extra safety, auth.protect already handles this)
-if (!authObj.userId) {
-  return NextResponse.redirect(signInUrl);
-}
-
-// ✅ Clerk stores email in session claims
-const email =
-  authObj.sessionClaims?.email ??
-  authObj.sessionClaims?.primary_email;
-
-if (email !== ADMIN_EMAIL) {
-  return new NextResponse('Forbidden', { status: 403 });
-}
 
       if (
         authObj.userId
