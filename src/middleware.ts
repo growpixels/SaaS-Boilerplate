@@ -1,3 +1,4 @@
+const ADMIN_EMAIL = 'founder@growpixels.in';
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 import {
   type NextFetchEvent,
@@ -46,6 +47,17 @@ export default function middleware(
       }
 
       const authObj = await auth();
+      const user = authObj.user;
+
+if (!user) {
+  return NextResponse.redirect(signInUrl);
+}
+
+const email = user.emailAddresses?.[0]?.emailAddress;
+
+if (email !== ADMIN_EMAIL) {
+  return new NextResponse('Forbidden', { status: 403 });
+}
 
       if (
         authObj.userId
