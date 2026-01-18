@@ -28,12 +28,15 @@ export const DashboardHeader = (props: {
   return (
     <>
       <div className="flex items-center">
-        <Link href="/dashboard">
+        <Link 
+          href="/dashboard"
+          classname="mr-3 flex items-center"
+          >
           <Logo />
         </Link>
 
         <svg
-          className="size-8 stroke-muted-foreground max-sm:hidden"
+          className="size-5 stroke-muted-foreground opacity-60 max-sm:hidden"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="none"
