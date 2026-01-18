@@ -3,8 +3,8 @@ export const Logo = () => {
     <img
       src="/logo.png"
       alt="Logo"
-      width={64}
-      height={64}
+      width={94}
+      height={94}
       style={{ display: 'block' }}
     />
   );
