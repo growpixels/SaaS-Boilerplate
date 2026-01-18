@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" width="240" height="48" role="img" aria-label="SaaS Template logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#6EE7B7"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="8" fill="url(#g)"/>
+  <g transform="translate(60,32)" font-family="Inter, Roboto, Arial, sans-serif" font-weight="600" fill="#0F172A">
+    <text x="0" y="-4" font-size="18">SaaS</text>
+    <text x="0" y="14" font-size="14" fill="#475569">Template</text>
+  </g>
+</svg>
