@@ -28,8 +28,8 @@ export const DashboardHeader = (props: {
   return (
     <>
       <div className="flex items-center">
-        <Link href="/dashboard" className="max-sm:hidden">
-          <Logo />
+        <Link href="/dashboard">
+          <Logo isTextHidden/>
         </Link>
 
         <svg
