@@ -3,10 +3,9 @@ export const Logo = () => {
     <img
       src="/logo.png"
       alt="Logo"
-      width={48}
-      height={48}
+      width={64}
+      height={64}
       style={{ display: 'block' }}
-      className="mt-0.5"
     />
   );
 };
