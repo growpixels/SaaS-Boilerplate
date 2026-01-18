@@ -21,19 +21,24 @@ const DashboardIndexPage = () => {
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
+            className="size-6"
           >
             <path d="M0 0h24v24H0z" stroke="none" />
-            <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3M12 12l8-4.5M12 12v9M12 12L4 7.5" />
+            <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3" />
+            <path d="M12 12l8-4.5" />
+            <path d="M12 12v9" />
+            <path d="M12 12L4 7.5" />
           </svg>
         )}
         title={t('message_state_title')}
         description={t.rich('message_state_description', {
           code: chunks => (
-            <code className="bg-secondary text-secondary-foreground">
+            <code className="rounded bg-secondary px-1 text-secondary-foreground">
               {chunks}
             </code>
           ),
         })}
+        button={<></>}   {/* ← REQUIRED but intentionally empty */}
       />
     </>
   );
