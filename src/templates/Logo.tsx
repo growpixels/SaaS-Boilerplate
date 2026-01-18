@@ -1,7 +1,11 @@
 import Image from 'next/image';
 import { AppConfig } from '@/utils/AppConfig';
 
-export const Logo = ({ isTextHidden }: { isTextHidden?: boolean }) => {
+type LogoProps = {
+  isTextHidden?: boolean;
+};
+
+export const Logo = ({ isTextHidden = false }: LogoProps) => {
   return (
     <div className="flex items-center gap-2">
       <Image
