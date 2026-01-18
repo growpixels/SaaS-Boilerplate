@@ -30,7 +30,7 @@ export const DashboardHeader = (props: {
       <div className="flex items-center">
         <Link 
           href="/dashboard"
-          classname="mr-3 flex items-center"
+          className="mr-3 flex items-center"
           >
           <Logo />
         </Link>
